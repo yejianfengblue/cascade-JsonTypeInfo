@@ -1,8 +1,6 @@
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type")
-@JsonSubTypes({@JsonSubTypes.Type(value = B.class, name = "B")})
+@JsonDeserialize(using = ACustomDeserializer.class)
 public abstract class A {
 
     private final String type;
