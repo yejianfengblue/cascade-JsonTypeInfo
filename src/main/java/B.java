@@ -12,9 +12,10 @@ public class B extends A {
     private final String propertyB;
 
     @JsonCreator
-    public B(@JsonProperty("type2") String type2,
+    public B(@JsonProperty("type") String type,
+             @JsonProperty("type2") String type2,
              @JsonProperty("propertyB") String propertyB) {
-        super("B");
+        super(type);
         this.type2 = type2;
         this.propertyB = propertyB;
     }
