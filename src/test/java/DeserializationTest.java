@@ -22,7 +22,6 @@ public class DeserializationTest {
 
         String json = "{\n" +
                        "  \"type\" : \"B\",\n" +
-                       "  \"type2\" : \"D\",\n" +
                        "  \"propertyB\" : \"b\"\n" +
                        "}";
 
@@ -35,8 +34,7 @@ public class DeserializationTest {
     void whenReadCJsonToB_thenObjectIsInstanceOfC() throws JsonProcessingException {
 
         String json = "{\n" +
-                      "  \"type\" : \"B\",\n" +
-                      "  \"type2\" : \"C\",\n" +
+                      "  \"type\" : \"C\",\n" +
                       "  \"propertyB\" : \"b\",\n" +
                       "  \"propertyC\" : \"c\"\n" +
                       "}";
@@ -50,8 +48,7 @@ public class DeserializationTest {
     void whenReadCJsonToA_thenObjectIsInstanceOfC() throws JsonProcessingException {
 
         String json = "{\n" +
-                      "  \"type\" : \"B\",\n" +
-                      "  \"type2\" : \"C\",\n" +
+                      "  \"type\" : \"C\",\n" +
                       "  \"propertyB\" : \"b\",\n" +
                       "  \"propertyC\" : \"c\"\n" +
                       "}";
