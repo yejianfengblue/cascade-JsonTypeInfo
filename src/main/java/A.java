@@ -2,12 +2,12 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type")
-@JsonSubTypes({@JsonSubTypes.Type(value = B.class, name = "B")})
+@JsonSubTypes({@JsonSubTypes.Type(value = B.class, name = "X")})
 public abstract class A {
 
-    private final String type;
+    private final MyType type;
 
-    public A(String type) {
+    public A(MyType type) {
         this.type = type;
     }
 }
