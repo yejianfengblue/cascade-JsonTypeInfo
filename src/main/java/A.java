@@ -10,4 +10,8 @@ public abstract class A {
     public A(MyType type) {
         this.type = type;
     }
+
+    public MyType getType() {
+        return type;
+    }
 }

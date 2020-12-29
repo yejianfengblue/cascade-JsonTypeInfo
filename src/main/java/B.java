@@ -13,4 +13,10 @@ public class B extends A {
         super(TypeX.X);
         this.propertyB = propertyB;
     }
+
+    public B(MyType type, String propertyB) {
+        super(type);
+        this.propertyB = propertyB;
+    }
+
 }

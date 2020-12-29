@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DeserializationTest {
@@ -27,6 +28,7 @@ public class DeserializationTest {
 
         A a = objectMapper.readValue(json, A.class);
         assertTrue(a instanceof B);
+        assertEquals(TypeX.X, a.getType());
     }
 
     // pass currently
@@ -41,6 +43,7 @@ public class DeserializationTest {
 
         B obj = objectMapper.readValue(json, B.class);
         assertTrue(obj instanceof C);
+        assertEquals(TypeY.YY, obj.getType());
     }
 
     // fail currently
@@ -56,5 +59,6 @@ public class DeserializationTest {
         A obj = objectMapper.readValue(json, A.class);
         assertTrue(obj instanceof B, "obj is not instance of B");
         assertTrue(obj instanceof C, "obj is not instance of C");
+        assertEquals(TypeY.YY, obj.getType());
     }
 }

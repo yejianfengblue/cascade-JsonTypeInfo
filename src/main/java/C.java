@@ -8,7 +8,7 @@ public class C extends B {
     @JsonCreator
     public C(@JsonProperty("propertyB") String propertyB,
              @JsonProperty("propertyC") String propertyC) {
-        super(propertyB);
+        super(TypeY.YY, propertyB);
         this.propertyC = propertyC;
     }
 }
